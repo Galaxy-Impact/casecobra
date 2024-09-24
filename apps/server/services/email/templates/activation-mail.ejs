@@ -1,0 +1,129 @@
+<!doctype html>
+<html
+  lang="en"
+  style="
+    height: 100%;
+    width: 100%;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  "
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activate your account</title>
+  </head>
+
+  <body
+    style="
+      height: 100%;
+      width: 100%;
+      font-family: sans-serif;
+      margin: 0;
+      background-color: rgba(55, 185, 55, 0.1);
+    "
+  >
+    <main style="padding-top: 40px; padding-bottom: 40px; margin: 0 auto">
+      <div
+        style="
+          padding: 8px;
+          text-align: center;
+          max-width: 580px;
+          margin: 0 auto;
+        "
+      >
+        <div style="text-align: center; margin-bottom: 12px">
+          <a
+            href="#"
+            style="
+              text-decoration: none;
+              font-size: 18px;
+              font-weight: 600;
+              color: #333;
+            "
+          >
+            case<span style="color: hsl(140, 77%, 32%)">cobra</span>
+          </a>
+        </div>
+        <div
+          style="
+            background-color: #fff;
+            padding: 32px;
+            border-radius: 9px;
+            box-shadow: 0 0 24px 16px rgba(0, 0, 0, 0.02);
+          "
+        >
+          <img
+            src="https://www.clipartmax.com/png/full/93-930681_green-email-icon-png.png"
+            alt="mail"
+            style="
+              width: 36px;
+              height: 36px;
+              object-fit: contain;
+              margin-bottom: 8px;
+            "
+          />
+          <h2 style="color: #333; margin-bottom: 12px; margin-top: 0">
+            Confirm your email
+          </h2>
+          <p
+            style="
+              color: #444;
+              line-height: 1.55;
+              margin: 0 auto;
+              margin-bottom: 24px;
+              max-width: 440px;
+              text-align: center;
+            "
+          >
+            Hello <span style="text-transform: capitalize"><%= name %></span>,
+            please click on the button below to validate your email address and
+            confirm that you are the owner of this account.
+          </p>
+
+          <div style="margin-bottom: 40px">
+            <a
+              href="<%= activationUrl %>"
+              style="
+                text-decoration: none;
+                padding: 8px 16px;
+                background-color: #4e923d;
+                color: #fff;
+                font-family: inherit;
+                border-radius: 5px;
+                display: block;
+                max-width: fit-content;
+                margin: 0 auto;
+              "
+              >Confirm your email</a
+            >
+          </div>
+
+          <div style="color: #666; margin: 8px 0">
+            <p style="color: #444; margin: 0; line-height: 1.5">
+              This link will expire in 24 hrs.
+            </p>
+            <p style="color: #444; margin: 0; line-height: 1.5">
+              If you have questions, we're here to help.
+            </p>
+          </div>
+
+          <div
+            style="
+              color: #444;
+              text-align: center;
+              font-weight: 500;
+              margin-top: 24px;
+            "
+          >
+            <span>Thanks</span>
+            <p style="color: #444; margin: 0; line-height: 1.5">
+              Team CaseCobra
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

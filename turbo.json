@@ -1,0 +1,52 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": ["**/.env"],
+  "tasks": {
+    "db:generate": {
+      "cache": false
+    },
+    "db:push": {
+      "cache": false
+    },
+    "build": {
+      "dependsOn": ["^db:generate", "^build"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": [".next/**", "!.next/cache/**"],
+      "env": [
+        "BASE_URL",
+        "ADMIN_EMAIL",
+        "NEXT_PUBLIC_GOOGLE_OATH_REDIRECT_URL",
+        "GOOGLE_OATUTH_REDIRECT_URL",
+        "GOOGLE_CLIENT_SECRET",
+        "GOOGLE_CLIENT_ID",
+        "CLIENT_URL",
+        "STRIPE_WEBHOOKS_SECRET",
+        "STRIPE_SECRET_KEY",
+        "STRIPE_PUBLISHABLE_KEY",
+        "EDGE_STORE_SECRET_KEY",
+        "EDGE_STORE_ACCESS_KEY",
+        "EMAIL_ACTIVATION_TOKEN_EXPIRES_IN",
+        "COOKIE_EXPIRES_IN",
+        "REFRESH_TOKEN_EXPIRES_IN",
+        "REFRESH_TOKEN_SECRET",
+        "ACCESS_TOKEN_SECRET",
+        "ACCESS_TOKEN_EXPIRES_IN",
+        "NODE_ENV",
+        "EMAIL_HOST",
+        "EMAIL_PORT",
+        "EMAIL_PASSWORD",
+        "EMAIL_USERNAME",
+        "PORT"
+      ]
+    },
+    "lint": {
+      "dependsOn": ["^lint"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true,
+      "dependsOn": ["^db:generate"],
+      "env": ["BASE_URL", "ADMIN_EMAIL", "NEXT_PUBLIC_GOOGLE_OATH_REDIRECT_URL"]
+    }
+  }
+}
